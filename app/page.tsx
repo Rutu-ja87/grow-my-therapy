@@ -18,11 +18,11 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <button className="bg-teal-700 text-white px-6 py-3 rounded-full transition-all duration-300 hover:bg-teal-800 hover:scale-105">
+            <button className="bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-800 transition">
               Schedule a Consultation
             </button>
 
-            <button className="border border-teal-700 text-teal-700 px-6 py-3 rounded-full transition-all duration-300 hover:bg-teal-700 hover:text-white">
+            <button className="border border-teal-700 text-teal-700 px-6 py-3 rounded-full hover:bg-teal-700 hover:text-white transition">
               Learn More
             </button>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-[#f4f7f8] p-10 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="bg-[#f4f7f8] p-10 rounded-2xl shadow-md hover:shadow-xl transition"
               >
                 <h3 className="text-lg font-semibold text-gray-900">
                   {service.title}
@@ -68,25 +68,43 @@ export default function Home() {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section className="bg-[#f4f7f8] py-28 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-900">
-            About Dr. Maya Reynolds
-          </h2>
+      <section className="bg-white py-20 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-          <p className="mt-6 text-gray-600 leading-relaxed">
-            Dr. Reynolds is a licensed psychologist in Austin specializing in
-            trauma-informed and attachment-based therapy for adults. Her
-            approach integrates evidence-based practices with a warm,
-            collaborative style that prioritizes safety and trust.
-          </p>
+          <div className="flex justify-center">
+            <Image
+              src="/images/therapist.jpg"
+              alt="Dr. Maya Reynolds"
+              width={450}
+              height={550}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">
+              About Dr. Maya Reynolds
+            </h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Dr. Maya Reynolds, PsyD provides trauma-informed therapy for adults 
+              navigating anxiety, trauma, and relationship challenges in Austin, Texas.
+            </p>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Her approach integrates attachment-based therapy, nervous system regulation,
+              and evidence-based practices to help clients build resilience and lasting change.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              She offers both in-person sessions in Austin and virtual therapy options.
+            </p>
+          </div>
+
         </div>
       </section>
 
       {/* ================= OUR OFFICE ================= */}
       <section className="bg-white py-28 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          
+
           <div>
             <h2 className="text-3xl font-semibold text-gray-900">
               Our Office
@@ -99,15 +117,14 @@ export default function Home() {
 
             <p className="mt-4 text-gray-600 leading-relaxed">
               Every detail of the space reflects a commitment to warmth and
-              professionalism — creating an atmosphere where meaningful work
-              can unfold.
+              professionalism.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
             <div className="relative h-48 rounded-xl overflow-hidden shadow">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                src="/images/office1.jpg"
                 alt="Therapy Office Exterior"
                 fill
                 className="object-cover"
@@ -116,22 +133,14 @@ export default function Home() {
 
             <div className="relative h-48 rounded-xl overflow-hidden shadow">
               <Image
-                src="https://images.unsplash.com/photo-1560448075-bb485b067938"
+                src="/images/office2.jpg"
                 alt="Therapy Office Interior"
                 fill
                 className="object-cover"
               />
             </div>
-
-            <div className="relative h-48 rounded-xl overflow-hidden shadow col-span-2">
-              <Image
-                src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
-                alt="Comfortable Therapy Room"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
+
         </div>
       </section>
 
@@ -147,7 +156,7 @@ export default function Home() {
             Support is here when you are ready.
           </p>
 
-          <button className="mt-8 bg-white text-teal-700 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:bg-gray-100">
+          <button className="mt-8 bg-white text-teal-700 px-6 py-3 rounded-full hover:bg-gray-100 transition">
             Schedule a Consultation
           </button>
         </div>
